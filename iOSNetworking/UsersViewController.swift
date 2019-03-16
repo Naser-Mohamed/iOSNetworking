@@ -1,14 +1,14 @@
 //
-//  ViewController.swift
+//  UsersViewController.swift
 //  iOSNetworking
 //
-//  Created by Naser Mohamed on 3/2/19.
+//  Created by Naser Mohamed on 3/16/19.
 //  Copyright © 2019 Naser Mohamed. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class UsersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -17,18 +17,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let session = URLSession.shared
-        
-        // https://goo.gl/wV9G4I
-        
         if let url = URL(string: "https://jsonplaceholder.typicode.com/users") {
             let request = URLRequest(url: url)
-            let task = session.dataTask(with: request) { (data, response, error) in
-                
+            let sharedSession = URLSession.shared
+            let task = sharedSession.dataTask(with: request) { (data, response, error) in
                 do {
                     if let data = data {
-                        let users = try JSONDecoder().decode([User].self, from: data)
-                        self.users = users
+                        self.users = try JSONDecoder().decode([User].self, from: data)
                         DispatchQueue.main.async {
                             self.tableView.reloadData()
                         }
@@ -42,6 +37,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let vc = segue.destination as? UserInfoVC,
+              let selectedPath = tableView.indexPathForSelectedRow else { return }
+        vc.user = users[selectedPath.row]
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -51,9 +52,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath)
         cell.textLabel?.text = users[indexPath.row].name
         return cell
     }
 }
-

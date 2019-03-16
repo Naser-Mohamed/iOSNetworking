@@ -8,24 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		E504038B2229E4EF0035750B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E504038A2229E4EF0035750B /* AppDelegate.swift */; };
-		E504038D2229E4EF0035750B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E504038C2229E4EF0035750B /* ViewController.swift */; };
 		E50403902229E4EF0035750B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E504038E2229E4EF0035750B /* Main.storyboard */; };
 		E50403922229E4F00035750B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E50403912229E4F00035750B /* Assets.xcassets */; };
 		E50403952229E4F00035750B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E50403932229E4F00035750B /* LaunchScreen.storyboard */; };
 		E536CBCC222A99B200717611 /* CompaniesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E536CBCB222A99B200717611 /* CompaniesResponse.swift */; };
 		E536CBCE222AB50300717611 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E536CBCD222AB50300717611 /* User.swift */; };
+		E5DAB657223D144300247704 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DAB656223D144300247704 /* UsersViewController.swift */; };
+		E5DAB659223D1A0F00247704 /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DAB658223D1A0F00247704 /* UserInfoVC.swift */; };
+		E5DAB65B223D23BD00247704 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DAB65A223D23BD00247704 /* PostsViewController.swift */; };
+		E5DAB65D223D24CC00247704 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DAB65C223D24CC00247704 /* PostModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E50403872229E4EF0035750B /* iOSNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E504038A2229E4EF0035750B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E504038C2229E4EF0035750B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E504038F2229E4EF0035750B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E50403912229E4F00035750B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E50403942229E4F00035750B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E50403962229E4F00035750B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E536CBCB222A99B200717611 /* CompaniesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesResponse.swift; sourceTree = "<group>"; };
 		E536CBCD222AB50300717611 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E5DAB656223D144300247704 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		E5DAB658223D1A0F00247704 /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
+		E5DAB65A223D23BD00247704 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		E5DAB65C223D24CC00247704 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,13 +65,16 @@
 			isa = PBXGroup;
 			children = (
 				E504038A2229E4EF0035750B /* AppDelegate.swift */,
-				E504038C2229E4EF0035750B /* ViewController.swift */,
+				E5DAB656223D144300247704 /* UsersViewController.swift */,
+				E5DAB658223D1A0F00247704 /* UserInfoVC.swift */,
+				E5DAB65A223D23BD00247704 /* PostsViewController.swift */,
 				E504038E2229E4EF0035750B /* Main.storyboard */,
 				E50403912229E4F00035750B /* Assets.xcassets */,
 				E50403932229E4F00035750B /* LaunchScreen.storyboard */,
 				E50403962229E4F00035750B /* Info.plist */,
 				E536CBCB222A99B200717611 /* CompaniesResponse.swift */,
 				E536CBCD222AB50300717611 /* User.swift */,
+				E5DAB65C223D24CC00247704 /* PostModel.swift */,
 			);
 			path = iOSNetworking;
 			sourceTree = "<group>";
@@ -141,10 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5DAB65B223D23BD00247704 /* PostsViewController.swift in Sources */,
 				E536CBCC222A99B200717611 /* CompaniesResponse.swift in Sources */,
 				E536CBCE222AB50300717611 /* User.swift in Sources */,
-				E504038D2229E4EF0035750B /* ViewController.swift in Sources */,
+				E5DAB65D223D24CC00247704 /* PostModel.swift in Sources */,
+				E5DAB657223D144300247704 /* UsersViewController.swift in Sources */,
 				E504038B2229E4EF0035750B /* AppDelegate.swift in Sources */,
+				E5DAB659223D1A0F00247704 /* UserInfoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
