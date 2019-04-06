@@ -13,6 +13,8 @@
 		E50403952229E4F00035750B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E50403932229E4F00035750B /* LaunchScreen.storyboard */; };
 		E536CBCC222A99B200717611 /* CompaniesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E536CBCB222A99B200717611 /* CompaniesResponse.swift */; };
 		E536CBCE222AB50300717611 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E536CBCD222AB50300717611 /* User.swift */; };
+		E5BD04122258B1550091C46C /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BD04112258B1550091C46C /* CollectionView.swift */; };
+		E5BD04142258B2C80091C46C /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BD04132258B2C80091C46C /* CollectionCell.swift */; };
 		E5DAB657223D144300247704 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DAB656223D144300247704 /* UsersViewController.swift */; };
 		E5DAB659223D1A0F00247704 /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DAB658223D1A0F00247704 /* UserInfoVC.swift */; };
 		E5DAB65B223D23BD00247704 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DAB65A223D23BD00247704 /* PostsViewController.swift */; };
@@ -28,6 +30,8 @@
 		E50403962229E4F00035750B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E536CBCB222A99B200717611 /* CompaniesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesResponse.swift; sourceTree = "<group>"; };
 		E536CBCD222AB50300717611 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E5BD04112258B1550091C46C /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		E5BD04132258B2C80091C46C /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		E5DAB656223D144300247704 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		E5DAB658223D1A0F00247704 /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
 		E5DAB65A223D23BD00247704 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 				E536CBCB222A99B200717611 /* CompaniesResponse.swift */,
 				E536CBCD222AB50300717611 /* User.swift */,
 				E5DAB65C223D24CC00247704 /* PostModel.swift */,
+				E5BD04112258B1550091C46C /* CollectionView.swift */,
+				E5BD04132258B2C80091C46C /* CollectionCell.swift */,
 			);
 			path = iOSNetworking;
 			sourceTree = "<group>";
@@ -152,10 +158,12 @@
 			files = (
 				E5DAB65B223D23BD00247704 /* PostsViewController.swift in Sources */,
 				E536CBCC222A99B200717611 /* CompaniesResponse.swift in Sources */,
+				E5BD04142258B2C80091C46C /* CollectionCell.swift in Sources */,
 				E536CBCE222AB50300717611 /* User.swift in Sources */,
 				E5DAB65D223D24CC00247704 /* PostModel.swift in Sources */,
 				E5DAB657223D144300247704 /* UsersViewController.swift in Sources */,
 				E504038B2229E4EF0035750B /* AppDelegate.swift in Sources */,
+				E5BD04122258B1550091C46C /* CollectionView.swift in Sources */,
 				E5DAB659223D1A0F00247704 /* UserInfoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

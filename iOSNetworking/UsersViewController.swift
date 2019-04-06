@@ -35,12 +35,9 @@ class UsersViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
             task.resume()
         }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let vc = segue.destination as? UserInfoVC,
-              let selectedPath = tableView.indexPathForSelectedRow else { return }
-        vc.user = users[selectedPath.row]
+        
+//        UserDefaults.standard.set(true, forKey: "isLogged")
+//        UserDefaults.standard.synchronize()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -55,5 +52,29 @@ class UsersViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath)
         cell.textLabel?.text = users[indexPath.row].name
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let alert = UIAlertController(title: "Confitrm", message: "Confirm to open user info", preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: "cancel", style: .default) { (action) in
+            print("cacnel btn clicked")
+        }
+        let confirmAction = UIAlertAction(title: "Confirm", style: .default) { [weak self] (action) in
+            self?.presentUserInfo(at: indexPath.row)
+        }
+        
+        if let cell = tableView.cellForRow(at: indexPath) {
+            alert.popoverPresentationController?.sourceView = cell
+        }
+        
+        alert.addAction(cancelAction)
+        alert.addAction(confirmAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func presentUserInfo(at index: Int) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UserInfoVC") as! UserInfoVC
+        vc.user = users[index]
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

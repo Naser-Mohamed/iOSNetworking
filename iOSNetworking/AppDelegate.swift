@@ -16,7 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+//        if let isLogged =  UserDefaults.standard.value(forKey: "isLogged") as? Bool {
+//            if isLogged {
+//                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CollectionView") as! CollectionView
+//                window?.rootViewController = vc
+//                window?.makeKeyAndVisible()
+//            }
+//        }
         return true
     }
 
